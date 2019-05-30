@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2034516402629600886}
-  - component: {fileID: 2034516402629600885}
+  - component: {fileID: 2846805859546273906}
   m_Layer: 0
   m_Name: Arme 2
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 2034516403789468602}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2034516402629600885
+--- !u!114 &2846805859546273906
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,11 +41,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2034516402629600887}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 097ba21f883e7624fb852e6631ef444c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f5680817c1e9dc428cc34bfda567835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arme: {fileID: 11400000, guid: 3145df89359f12b4ab88f1daa0e1ee23, type: 2}
+  attackPos: {fileID: 2034516404035059204}
+  arme: {fileID: 11400000, guid: 811cf7fd0c5ee4048a897640f44e7ff2, type: 2}
   visuel: {fileID: 2034516403260953190}
+  ennemies:
+    serializedVersion: 2
+    m_Bits: 512
+  toucheAttaque: Fire2
+  animMelee: Melee2
+  JoueurAnim: {fileID: 1229296110}
 --- !u!1 &2034516403244181551
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +62,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2034516403244181550}
-  - component: {fileID: 2034516403244181549}
+  - component: {fileID: 4734284106230256714}
   m_Layer: 0
   m_Name: Arme 1
   m_TagString: Untagged
@@ -78,7 +85,7 @@ Transform:
   m_Father: {fileID: 2034516403789468602}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2034516403244181549
+--- !u!114 &4734284106230256714
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -87,11 +94,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 2034516403244181551}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 097ba21f883e7624fb852e6631ef444c, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f5680817c1e9dc428cc34bfda567835, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arme: {fileID: 11400000, guid: 811cf7fd0c5ee4048a897640f44e7ff2, type: 2}
+  attackPos: {fileID: 2034516404035059204}
+  arme: {fileID: 11400000, guid: 92ca5cf1c848eef4682b5fda7082218c, type: 2}
   visuel: {fileID: 2034516403488794707}
+  ennemies:
+    serializedVersion: 2
+    m_Bits: 512
+  toucheAttaque: Fire1
+  animMelee: Melee1
+  JoueurAnim: {fileID: 1229296110}
 --- !u!1 &2034516403260953184
 GameObject:
   m_ObjectHideFlags: 0
@@ -150,7 +164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -450,8 +464,9 @@ GameObject:
   - component: {fileID: 2034516403789468581}
   - component: {fileID: 2034516403789468601}
   - component: {fileID: 2034516403789468603}
-  - component: {fileID: 2034516403789468580}
   - component: {fileID: 1229296110}
+  - component: {fileID: 8471360464327681942}
+  - component: {fileID: 1745550573}
   m_Layer: 0
   m_Name: Joueur
   m_TagString: Player
@@ -528,29 +543,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   vitesseInitialee: 5
   moveSmooth: 0.3
---- !u!114 &2034516403789468580
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2034516403789468582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a9f33ee9b4018d459b914c6d6caa9aa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackPos: {fileID: 2034516404035059204}
-  arme1: {fileID: 11400000, guid: 811cf7fd0c5ee4048a897640f44e7ff2, type: 2}
-  arme2: {fileID: 11400000, guid: 811cf7fd0c5ee4048a897640f44e7ff2, type: 2}
-  GOarme1: {fileID: 2034516403244181551}
-  GOarme2: {fileID: 2034516402629600887}
-  ennemies:
-    serializedVersion: 2
-    m_Bits: 512
-  toucheAttaque1: Fire1
-  toucheAttaque2: Fire2
-  JoueurAnim: {fileID: 1229296110}
 --- !u!95 &1229296110
 Animator:
   serializedVersion: 3
@@ -570,6 +562,40 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!250 &8471360464327681942
+PointEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034516403789468582}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceMagnitude: -10
+  m_ForceVariation: 0
+  m_DistanceScale: 1
+  m_ForceSource: 0
+  m_ForceTarget: 0
+  m_ForceMode: 0
+  m_Drag: 0
+  m_AngularDrag: 0
+--- !u!114 &1745550573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2034516403789468582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f9fa594f4dfc344d80e3eb6bda08a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sante: 10
+  deathEffect: {fileID: 0}
 --- !u!1 &2034516403831052788
 GameObject:
   m_ObjectHideFlags: 0
@@ -742,7 +768,7 @@ GameObject:
   m_Layer: 0
   m_Name: Direction de feu
   m_TagString: Untagged
-  m_Icon: {fileID: -5397416234189338067, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -753,7 +779,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2034516404035059205}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.15, z: 0}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0}
   m_Children: []

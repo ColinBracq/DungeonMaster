@@ -7,12 +7,15 @@ public class Arme : ScriptableObject
 {
     public string nom;
     public Sprite imageArme;
-    public Color couleurArme;
+    public Material materialArme;
 
     public string type;
-    
 
-    public int dommage;
+    public GameObject projectile;
+    public float vitesseProj;
+    public float porteeExplo;
+
+    public float dommage;
     public float cadence;
     public float portee;
 

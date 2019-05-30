@@ -4,19 +4,25 @@ using UnityEngine;
 
 public class Ennemi : MonoBehaviour
 {
-    public int sante = 10;
-
+    public float sante = 10;
+    public Animator enemyAnim;
+    public Rigidbody2D rb;
+    private string Mort = "Mort";
+    private string Degats = "Degat";
     private void Update()
     {
         if(sante <= 0)
         {
-            Destroy(gameObject);
+            enemyAnim.SetTrigger(Mort);
+            Destroy(gameObject,0.1f);
         }
     }
 
-    public void PrendreDegats(int degats)
+    public void PrendreDegats(float degats)
     {
         sante -= degats;
+        enemyAnim.SetTrigger(Degats);
         Debug.Log("degats pris");
     }
+
 }

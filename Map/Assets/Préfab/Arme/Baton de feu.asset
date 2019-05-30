@@ -10,12 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9cfdaf6e68528c74eba1bd80656e3ca1, type: 3}
-  m_Name: Rien
+  m_Name: Baton de feu
   m_EditorClassIdentifier: 
-  nom: Rien
-  imageArme: {fileID: 10917, guid: 0000000000000000f000000000000000, type: 0}
-  materialArme: {fileID: 10758, guid: 0000000000000000f000000000000000, type: 0}
-  type: Rien
-  dommage: 0
-  cadence: 0
-  portee: 0
+  nom: Baton de feu
+  imageArme: {fileID: 21300000, guid: a922ba6d5bf79704fab4e09b3193ae27, type: 3}
+  materialArme: {fileID: 0}
+  type: "Arme \xE0 distance"
+  projectile: {fileID: 1944260459467776235, guid: ee3ec889e9c4ff44dad6f96bceb44eda,
+    type: 3}
+  vitesseProj: 10
+  dommage: 5
+  cadence: 2
+  portee: 0.5
